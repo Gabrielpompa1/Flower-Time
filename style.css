@@ -34,6 +34,9 @@ main {
     grid-row: 6 / span 1;
     grid-column: 1 / span 3;
 }
+.correct-guesses li {
+    display: inline;
+}
 
 .submit-form {
     background-color: lightyellow;

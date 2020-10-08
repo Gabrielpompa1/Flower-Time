@@ -7,8 +7,8 @@ const input = document.querySelector('.input');
 const submitButton = document.querySelector('.submit-button');
 const ulCorrect = document.querySelector('.correct-ul');
 const ulIncorrect = document.querySelector('.incorrect-ul');
-let li = document.createElement('li');
-let li2 = document.createElement('li');
+// let li = document.createElement('li');
+// let li2 = document.createElement('li');
 // Word(s) to guess
 
 let word = ['H', 'E', 'L', 'L', 'O'];
@@ -45,11 +45,13 @@ function checkGuess() {
 }
 
 function correctGuess() {
+    let li = document.createElement('li');
 	li.innerText = input.value;
 	ulCorrect.appendChild(li);
 }
 
 function incorrectGuess() {
+    let li2 = document.createElement('li');
 	li2.innerText = input.value;
 	ulIncorrect.appendChild(li2);
 }
