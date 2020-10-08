@@ -46,3 +46,7 @@
 # Gold Stretch Goals
 - Play against a computer
 - Show different flower animations
+
+# Starting point
+
+1. 
