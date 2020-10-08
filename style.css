@@ -41,10 +41,6 @@ main {
     grid-column: 1 / span 3;
 }
 
-form {
-
-}
-
 input {
     height: 30px;
     border: 2px solid black;
@@ -75,4 +71,3 @@ input {
 }
 
 /* Modal CSS */
-
