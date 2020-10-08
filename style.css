@@ -7,6 +7,11 @@ header {
     font-size: large;
 }
 
+.open-rules {
+    border: 1px solid black;
+    font-size: large;
+}
+
 main {
     display: grid;
     margin: 0 auto;
@@ -18,7 +23,7 @@ main {
     column-gap: 10px;
 }
 
-.previous-guesses {
+.incorrect-guesses {
     background-color: lightcoral;
     grid-column: 1 / span 1;
     grid-row: 1 / span 4;
@@ -68,3 +73,6 @@ input {
     grid-row: 7 / span 1;
     grid-column: 3 / span 1;
 }
+
+/* Modal CSS */
+

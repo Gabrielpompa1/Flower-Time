@@ -9,17 +9,30 @@
 <body>
     <header>
         <h1>Flower Time</h1>
-        <button class="start-button">Start Game</button>
+
+        <!-- Starts and refreshes the game -- possibly split these two function up later -->
+        <button class="start-button">
+            Start Game
+        </button>
+
+        <!-- This button opens up the rules modal -->
+        <button class="open-rules">
+            Open Rules
+        </button>
     </header>
     <main>
-        <div class="previous-guesses">Previous guesses box</div>
+        
+        <div class="incorrect-guesses">Incorrect guesses box</div>
         <div class="submit-form">
             <form action="submit">
-                <input type="text">
+                <input class="input" type="text" placeholder="Guess a letter">
                 <button class="submit-button">Submit</button>
             </form>
         </div>
-        <div class="correct-guesses">Correct guess box</div>
+        <div class="correct-guesses">
+            <h3>Correct guess box</h3>
+            <ul class="correct-Ul"></ul>
+        </div>
         <div class="flower">Flower design box</div>
         <div class="win-count">Win Count</div>
         <div class="loss-count">Loss Count</div>

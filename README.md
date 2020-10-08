@@ -19,7 +19,7 @@
 ![Flower time wireframe](flowertime.png)
 
 # MVP Goals
-- Show the game screen
+- Show the game screen √
 - Show the player how many letters are in the word
 - Present the rules
 - Display the flower's creation progress
