@@ -12,7 +12,9 @@ const ulIncorrect = document.querySelector('.incorrect-ul');
 // Word(s) to guess
 
 let word = ['H', 'E', 'L', 'L', 'O'];
+let winningWord = word.toString()
 
+console.log(winningWord)
 // Event listeners
 
 form.addEventListener('submit', (event) => {
@@ -46,8 +48,9 @@ function checkGuess() {
 
 function correctGuess() {
     let li = document.createElement('li');
-	li.innerText = input.value;
-	ulCorrect.appendChild(li);
+    ulCorrect.appendChild(li);
+    li.innerText = input.value;
+	
 }
 
 function incorrectGuess() {
