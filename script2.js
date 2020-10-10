@@ -23,22 +23,9 @@ form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	checkGuess()
 	checkWin()
-	// submitGuess()
 });
 
 // Functions
-
-// function submitGuess() {
-// 	for (let i = 0; i < word.length; i++) {
-// 		if(input.value === word[i]){
-// 	const p = document.createElement('p')
-// 	p.innerText = input.value
-// 	incorrectUl.appendChild(p)
-// 		}
-// }
-// }
-
-
 
 function checkGuess() {
 	if(input.value.toUpperCase() === word[0]) {
@@ -75,17 +62,22 @@ function incorrectGuess() {
 		incorrectUl.appendChild(newP)
 }
 
-function splitWord() {
-	return word.split('')
-}
-
 function checkWin () {
-	let newArr = document.querySelectorAll('.answer')
-	newArr.forEach()
-	console.log(newArr[0].innerText)
+	let newArr = key0.innerText + key1.innerText + key2.innerText + key3.innerText + key4.innerText
+	if(newArr === word){
+	alert('You win!')}
 }
 
-checkWin()
-// console.log(splitWord())
-// console.log(input.value)
-// // Goals
+function winCount() {
+	
+}
+
+// function submitGuess() {
+// 	for (let i = 0; i < word.length; i++) {
+// 		if(input.value === word[i]){
+// 	const p = document.createElement('p')
+// 	p.innerText = input.value
+// 	incorrectUl.appendChild(p)
+// 		}
+// }
+// }
