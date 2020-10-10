@@ -3,6 +3,9 @@
 const form = document.querySelector('.submit-form')
 const phrase = document.querySelector('.phrase')
 const input = document.querySelector('.input')
+let answer = document.querySelector('.answer')
+const correctUl = document.querySelector('.correct-ul')
+const incorrectUl = document.querySelector('.incorrect-ul')
 
 let key0 = document.getElementById('key0')
 let key1 = document.getElementById('key1')
@@ -19,13 +22,23 @@ let word = 'HELLO'
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	checkGuess()
+	checkWin()
+	// submitGuess()
 });
 
 // Functions
 
-function submitGuess() {
-	
-}
+// function submitGuess() {
+// 	for (let i = 0; i < word.length; i++) {
+// 		if(input.value === word[i]){
+// 	const p = document.createElement('p')
+// 	p.innerText = input.value
+// 	incorrectUl.appendChild(p)
+// 		}
+// }
+// }
+
+
 
 function checkGuess() {
 	if(input.value.toUpperCase() === word[0]) {
@@ -51,23 +64,28 @@ function checkGuess() {
 		key4.innerText = input.value
 		input.value = ''
 	} else {
-		alert('Wrong answer bucko')
+		incorrectGuess()
 		input.value = ''
 	}
 }
 
-// function incorrectGuess() {
-// 	if(input.value !== word) {
-// 		let newP = document.createElement('p')
-// 		newP = input.value
-		
-// 	}
-// }
+function incorrectGuess() {
+		let newP = document.createElement('p')
+		newP.innerText = input.value
+		incorrectUl.appendChild(newP)
+}
 
-// Goals
+function splitWord() {
+	return word.split('')
+}
 
-//Make flower
-// Choose a word to  make
-// Put it into an array, split it up by individual letters?
-// Make a form to 'submit' for the correct word choice
-// Make a separate 'input' box for letter choices. If a letter input matches a value for the word, allow it to be shown. If now, put it in the bad guess category
+function checkWin () {
+	let newArr = document.querySelectorAll('.answer')
+	newArr.forEach()
+	console.log(newArr[0].innerText)
+}
+
+checkWin()
+// console.log(splitWord())
+// console.log(input.value)
+// // Goals
