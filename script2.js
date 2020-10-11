@@ -78,14 +78,24 @@ function submitGuess() {
 			let key4 = document.getElementById('key4');
 			key4.innerText = word[4];
 			input.value = '';
+		} else {
+			let p2 = document.createElement('p')
+			p2.innerText = input.value.toUpperCase()
+			incorrectUl.appendChild(p2)
+			input.value = ''
 		}
 }
 // Incorrect guess function
 
 function incorrectGuess() {
-	if(input.value.toUpperCase() !== word) {
-		console.log('This is wrong')
-	}
+	// for (let i = 0; i < word.length; i++) {
+	// if(input.value.toUpperCase() !== word[0] || word[1] || word[2] || word[3] || word[4]) {
+	// 	console.log('This is wrong')
+	// }
+	// }
+	let p2 = document.createElement('p');
+	p2.innerText = input.value.toUpperCase();
+	incorrectUl.appendChild(p2);
 }
 
 // Generate underscore spots for letter choices
@@ -105,88 +115,3 @@ function showRules () {
 		`Welcome to Flower Time!\n \n In order to keep the flower tall and happy, you must guess its favorite word! \n\n Here are the rules: \n - In the 'Correct' box, input your guess for which letters might be found in the magic word. \n - If your guess is correct, the flower will remain intact. \n - If you guess wrong, the flower will lose a petal. \n - If the flower loses all its petals, the game is over. \n - If all of your guesses are correct and you spell the magic word, you win! \n - When you are ready, press start game. Good Luck!\n`
 	);
 }
-
-// const form = document.querySelector('.submit-form')
-// const phrase = document.querySelector('.phrase')
-// const input = document.querySelector('.input')
-// let answer = document.querySelector('.answer')
-// const correctUl = document.querySelector('.correct-ul')
-// const incorrectUl = document.querySelector('.incorrect-ul')
-// const winCountDiv = document.querySelector('.win-count')
-
-// let key0 = document.getElementById('key0')
-// let key1 = document.getElementById('key1')
-// let key2 = document.getElementById('key2')
-// let key3 = document.getElementById('key3')
-// let key4 = document.getElementById('key4')
-
-// //// Word(s) to guess
-
-// let word = 'HELLO'
-
-// //// Event listeners
-
-// form.addEventListener('submit', (event) => {
-// 	event.preventDefault();
-// 	checkGuess()
-// 	checkWin()
-// });
-
-// // Functions
-
-// function checkGuess() {
-// 	if(input.value.toUpperCase() === word[0]) {
-// 		document.getElementById('key0')
-// 		key0.innerText = input.value
-// 		input.value = ''
-// 	} else if(input.value.toUpperCase() === word[1]) {
-// 		document.getElementById('key1')
-// 		key1.innerText = input.value
-// 		input.value = ''
-// 	} else if(input.value.toUpperCase() === word[2]) {
-// 		document.getElementById('key2')
-// 		document.getElementById('key3')
-// 		key2.innerText = input.value
-// 		key3.innerText = input.value
-// 		input.value = ''
-// 	} else if(input.value.toUpperCase() === word[3]) {
-// 		document.getElementById('key3')
-// 		key3.innerText = input.value
-// 		input.value = ''
-// 	} else if(input.value.toUpperCase() === word[4]) {
-// 		document.getElementById('key4')
-// 		key4.innerText = input.value
-// 		input.value = ''
-// 	} else {
-// 		incorrectGuess()
-// 		input.value = ''
-// 	}
-// }
-
-// function incorrectGuess() {
-// 		let newP = document.createElement('p')
-// 		newP.innerText = input.value.toUpperCase()
-// 		incorrectUl.appendChild(newP)
-// }
-
-// function checkWin () {
-// 	let newArr = key0.innerText + key1.innerText + key2.innerText + key3.innerText + key4.innerText
-// 	if(newArr === word){
-// 	alert('You win!')
-
-// }
-// }
-
-// function winCount() {
-
-// }
-
-// // function submitGuess() {
-// // 	for (let i = 0; i < word.length; i++) {
-// // 		if(input.value === word[i]){
-// // 	const p = document.createElement('p')
-// // 	p.innerText = input.value
-// // 	incorrectUl.appendChild(p)
-// // 		}
-// // }
-// // }
