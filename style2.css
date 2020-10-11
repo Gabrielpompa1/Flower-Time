@@ -106,3 +106,144 @@ input {
 .reset-button {
     font-size: large;
 }
+
+/**** Flower Parts CSS ****/
+
+.flower-parts {
+
+}
+
+/* Body */
+
+#stem {
+    background-color: green;
+    width: 15px;
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+    left: 95px;
+    bottom: 500px;
+}
+
+#bulb {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    left: 63px;
+    bottom: 480px;
+    z-index: 1;
+}
+
+/* Petals */
+
+#petal1 {
+    position: relative;
+    left: 67px;
+    bottom: 5px;
+    background-color: lemonchiffon;
+    transform: rotate(135deg);
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+#petal2 {
+    position: relative;
+    left: 130px;
+    bottom: 50px;
+    background-color: lemonchiffon;
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+#petal3 {
+    position: relative;
+    background-color: lemonchiffon;
+    transform: rotate(90deg);
+    left: 6px;
+    bottom: 120px;
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+#petal4 {
+    position: relative;
+    bottom: 125px;
+    right: 22px;
+    transform: rotate(45deg);
+    background-color: lemonchiffon;
+    width: 70px;
+    height: 70px;
+    border-radius: 80px 0px;
+}
+#petal5 {
+    position: relative;
+    bottom: 130px;
+    left: 5px;
+    background-color: lemonchiffon;
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+#petal6 {
+    position: relative;
+    transform: rotate(45deg);
+    left: 158px;
+    bottom: 265px;
+    background-color: lemonchiffon;
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+#petal7 {
+    position: relative;
+    z-index: 1;
+    background-color: lemonchiffon;
+    transform: rotate(135deg);
+    left: 68px;
+    bottom: 245px;
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+#petal8 {
+    position: relative;
+    bottom: 342px;
+    transform: rotate(90deg);
+    left: 133px;
+    background-color: lemonchiffon;
+    width: 70px;
+    height: 70px;
+    border-radius: 800px 0px;
+}
+
+/* Bulb parts */
+
+#left-eye {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+#right-eye {
+    position: relative;
+    left: 50px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#smile {
+    position: relative;
+    left: 20px;
+    top: 34px;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+}
