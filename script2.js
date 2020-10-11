@@ -5,15 +5,10 @@ const correctUl = document.querySelector('.correct-ul')
 const incorrectUl = document.querySelector('.incorrect-ul')
 const form = document.querySelector('.form')
 const input = document.querySelector('.input')
-let answer = []
+let theAnswer = []
+let wrongAnswer = []
 
-// word.forEach(solution)
-
-// function solution(item, index, array) {
-	
-// 	answer.push()
-// }
-// console.log(answer)
+///////  Main Event listener(s) ///////
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault()
@@ -21,30 +16,38 @@ form.addEventListener('submit', (event) => {
 	checkWin()
 })
 
-// answer.forEach(checkWin())
-function checkWin() {
-	
-}
+//// Check win condition function
 
-console.log(answer)
+function checkWin() {
+	if(word2.toString('') === theAnswer.toString()) {
+		alert('This works')
+	}
+}
+console.log(word2.toString())
+
+//// Submit guess function
+
 function submitGuess() {
 	for (let i = 0; i < word2.length; i++) {
 		if(input.value.toUpperCase() === word2[i]) {
-			answer.push(input.value.toUpperCase())
+			theAnswer.push(input.value.toUpperCase())
 			const p = document.createElement('p')
 			p.classList.add('answer')
-			p.innerText = input.value.toUpperCase()
+			p.innerText = word2[i]
 			correctUl.appendChild(p)
 			input.value = ''
-			console.log(p)
-			console.log(answer)
-			console.log("it works")
-		} 
-	}
+		}
+	} 
 }
 
+//// Check incorrect guess function
+
 function incorrectGuess() {
-	
+		const p2 = document.createElement('p')
+		p2.classList.add('answer')
+		p2.innerText = input.value.toUpperCase()
+		incorrectUl.appendChild(p2)
+		input.value = ''
 }
 
 
