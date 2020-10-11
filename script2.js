@@ -1,14 +1,19 @@
 //// Variables
+
+
 const word2 = ['F', 'I', 'N', 'D', 'S']
 const word = ['H', 'E', 'L', 'L', 'O']
 const correctUl = document.querySelector('.correct-ul')
 const incorrectUl = document.querySelector('.incorrect-ul')
 const form = document.querySelector('.form')
 const input = document.querySelector('.input')
-let theAnswer = []
-let wrongAnswer = []
+const startButton = document.querySelector('.start-button')
+let answer = []
+counter = 0
+///// Event Listeners /////
 
-///////  Main Event listener(s) ///////
+
+// Form event listener
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault()
@@ -16,43 +21,55 @@ form.addEventListener('submit', (event) => {
 	checkWin()
 })
 
-//// Check win condition function
+// Start Game event listener
+
+startButton.addEventListener('click', (event) => {
+	word2.forEach(makeUnderScore)
+})
+
+
+
+///// Functions /////
+
+
+// Check win condition function
 
 function checkWin() {
-	if(word2.toString('') === theAnswer.toString()) {
-		alert('This works')
+	if(answer.toString() === word2.toString()) {
+		console.log('You Win')
 	}
 }
-console.log(word2.toString())
 
-//// Submit guess function
+// Submit guess function
 
 function submitGuess() {
 	for (let i = 0; i < word2.length; i++) {
 		if(input.value.toUpperCase() === word2[i]) {
-			theAnswer.push(input.value.toUpperCase())
+			answer.push(input.value.toUpperCase())
 			const p = document.createElement('p')
 			p.classList.add('answer')
 			p.innerText = word2[i]
 			correctUl.appendChild(p)
 			input.value = ''
-		}
-	} 
+		} 
+	}
 }
 
-//// Check incorrect guess function
+// Incorrect guess function
 
 function incorrectGuess() {
-		const p2 = document.createElement('p')
-		p2.classList.add('answer')
-		p2.innerText = input.value.toUpperCase()
-		incorrectUl.appendChild(p2)
-		input.value = ''
+	
 }
 
+// Generate underscore spots for letter choices
 
-
-
+function makeUnderScore() {
+	let underscore = document.createElement('p')
+	underscore.classList.add('answer')
+	underscore.setAttribute('id', 'key' + counter++)
+	underscore.innerText = ('_')
+	correctUl.appendChild(underscore)
+}
 
 
 
