@@ -7,6 +7,7 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.input');
 const startButton = document.querySelector('.start-button');
 const rulesButton = document.querySelector('.open-rules')
+const resetButton = document.querySelector('.reset-button')
 
 
 let answer = [];
@@ -30,7 +31,13 @@ startButton.addEventListener('click', (event) => {
 // Show Rules event listener
 
 rulesButton.addEventListener('click', (event) => {
-	alert(`Welcome to Flower Time!\n \n In order to keep the flower tall and happy, you must guess its favorite word! \n\n Here are the rules: \n - In the 'Correct' box, input your guess for which letters might be found in the magic word. \n - If your guess is correct, the flower will remain intact. \n - If you guess wrong, the flower will lose a petal. \n - If the flower loses all its petals, the game is over. \n - If all of your guesses are correct and you spell the magic word, you win! \n - When you are ready, press start game. Good Luck!\n`)
+	showRules()
+})
+
+// Reset game event listener
+
+resetButton.addEventListener('click', (event) => {
+	location.reload()
 })
 
 ///// Functions /////
@@ -76,8 +83,8 @@ function submitGuess() {
 // Incorrect guess function
 
 function incorrectGuess() {
-	if(input.value !== word) {
-
+	if(input.value.toUpperCase() !== word) {
+		console.log('This is wrong')
 	}
 }
 
@@ -93,7 +100,11 @@ function makeUnderScore() {
 
 // Show Rules
 
-
+function showRules () {
+	alert(
+		`Welcome to Flower Time!\n \n In order to keep the flower tall and happy, you must guess its favorite word! \n\n Here are the rules: \n - In the 'Correct' box, input your guess for which letters might be found in the magic word. \n - If your guess is correct, the flower will remain intact. \n - If you guess wrong, the flower will lose a petal. \n - If the flower loses all its petals, the game is over. \n - If all of your guesses are correct and you spell the magic word, you win! \n - When you are ready, press start game. Good Luck!\n`
+	);
+}
 
 // const form = document.querySelector('.submit-form')
 // const phrase = document.querySelector('.phrase')

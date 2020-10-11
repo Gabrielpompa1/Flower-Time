@@ -96,4 +96,15 @@ input {
     justify-content: space-evenly;
 }
 
+.reset-game {
+    background-color: brown;
+    text-align: center;
+    grid-row: 7 / span 1fr;
+    grid-column: 2 / span 1fr;
+}
+
+.reset-button {
+
+}
+
 /* Modal CSS */
