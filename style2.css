@@ -116,105 +116,126 @@ input {
 /* Body */
 
 #stem {
+    position: relative;
+    left: 95px;
+    bottom: 420px;
     background-color: green;
     width: 15px;
-    height: 200px;
-    position: relative;
+    height: 210px;
     border-radius: 5px;
-    left: 95px;
-    bottom: 500px;
 }
 
 #bulb {
+    position: relative;
+    left: 63px;
+    bottom: 400px;
     background-color: yellow;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    position: relative;
-    left: 63px;
-    bottom: 480px;
     z-index: 1;
+}
+
+#left-arm {
+    position: relative;
+    transform: rotate(45deg);
+    left: 25px;
+    bottom: 560px;
+    background-color: green;
+    width: 60px;
+    height: 60px;
+    border-radius: 80px 0px;
+}
+#right-arm {
+    position: relative;
+    transform: rotate(225deg);
+    left: 120px;
+    bottom: 620px;
+    background-color: green;
+    width: 60px;
+    height: 60px;
+    border-radius: 80px 0px;
 }
 
 /* Petals */
 
 #petal1 {
     position: relative;
-    left: 67px;
-    bottom: 5px;
-    background-color: lemonchiffon;
     transform: rotate(135deg);
-    width: 70px;
-    height: 70px;
+    left: 73px;
+    top: 15px;
+    background-color: lemonchiffon;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 #petal2 {
     position: relative;
-    left: 130px;
-    bottom: 50px;
+    left: 122px;
+    bottom: 20px;
     background-color: lemonchiffon;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 #petal3 {
     position: relative;
-    background-color: lemonchiffon;
     transform: rotate(90deg);
-    left: 6px;
-    bottom: 120px;
-    width: 70px;
-    height: 70px;
+    left: 25px;
+    bottom: 80px;
+    background-color: lemonchiffon;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 #petal4 {
     position: relative;
-    bottom: 125px;
-    right: 22px;
     transform: rotate(45deg);
+    left: 15px;
+    bottom: 90px;
     background-color: lemonchiffon;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 80px 0px;
 }
 #petal5 {
     position: relative;
-    bottom: 130px;
-    left: 5px;
+    left: 25px;
+    bottom: 100px;
     background-color: lemonchiffon;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 #petal6 {
     position: relative;
     transform: rotate(45deg);
-    left: 158px;
-    bottom: 265px;
+    left: 138px;
+    bottom: 211px;
     background-color: lemonchiffon;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 #petal7 {
     position: relative;
+    transform: rotate(135deg);
+    left: 73px;
+    bottom: 205px;
     z-index: 1;
     background-color: lemonchiffon;
-    transform: rotate(135deg);
-    left: 68px;
-    bottom: 245px;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 #petal8 {
     position: relative;
-    bottom: 342px;
     transform: rotate(90deg);
-    left: 133px;
+    left: 120px;
+    bottom: 285px;
     background-color: lemonchiffon;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 800px 0px;
 }
 
@@ -222,8 +243,8 @@ input {
 
 #left-eye {
     position: relative;
-    top: 25px;
     left: 20px;
+    top: 25px;
     width: 10px;
     height: 10px;
     background-color: black;
@@ -233,17 +254,19 @@ input {
     position: relative;
     left: 50px;
     top: 15px;
+    background-color: black;
     width: 10px;
     height: 10px;
-    background-color: black;
     border-radius: 50%;
 }
 
 #smile {
     position: relative;
-    left: 20px;
-    top: 34px;
-    width: 40px;
-    height: 5px;
-    background-color: black;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: 20px;
+    border: 6px solid;
+    border-radius: 100%;
+    border-color: transparent transparent black transparent;
 }
