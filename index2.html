@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>Flower Time</title>
 </head>
 
@@ -20,10 +21,18 @@
         <!-- This button opens up the rules modal -->
         <button class="open-rules">
             Open Rules
-        </button>
+        </button><br>
 
         <!-- Accessorize! -->
-        <button class="accessorize">YeeHaw!</button>
+        
+        <label for="costumes">Select A Theme</label>
+            <select name="costumes" class="accessorize">
+                <option value="select">Select...</option>
+                <option value="flower">Flower</option>
+                <option value="cowboy" class="cowboy-option">Western</option>
+                <option value="spaceman" class="space-option">Space</option>
+            </select>
+            <input class="costume-submit" type="submit" value="Accessorize!">
     </header>
     <main>
 
@@ -78,14 +87,18 @@
             
             <!-- Cowboy stuff -->
             
-            <div class="flower-parts, cowboy" id="base-left"></div>
-            <div class="flower-parts, cowboy" id="base-right"></div>
+            <div class="cowboy" id="base-left"></div>
+            <div class="cowboy" id="base-right"></div>
 
-            <div class="flower-parts, cowboy" id="brim"></div>
+            <div class="cowboy" id="brim"></div>
 
             <!-- Moustache Parts -->
-            <div class="flower-parts, cowboy" id="moustache-left"></div>
-            <div class="flower-parts, cowboy" id="moustache-right"></div>
+            <div class="cowboy" id="moustache-left"></div>
+            <div class="cowboy" id="moustache-right"></div>
+
+            <!-- Space Helmet -->
+            <div class="space-suit" id="helmet-top"></div>
+            <div class="space-suit" id="helmet-base"></div>
         </div>
 
         <!-- Win Counter -->

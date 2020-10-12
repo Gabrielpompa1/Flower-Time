@@ -1,398 +1,437 @@
+html {
+	font-family: 'Indie Flower', cursive;
+	background-image: url('flowerbackground.png');
+	background-size: 30%;
+    background-color: rgb(223, 250, 250);
+    margin: 0 auto;
+}
 header {
-    font-size: large;
-    background-color: lightcyan;
-    text-align: center;
-    padding: 10px;
+	font-size: large;
+	background-color: rgb(213, 250, 250, 0.9);
+	border-radius: 30%;
+	border: 10px solid rgb(180, 255, 255);
+	line-height: 10px;
+	text-align: center;
+	padding: 10px;
+}
+
+header h1 {
+	font-size: 60px;
 }
 .start-button {
-    border: 1px solid black;
-    font-size: large;
-    color: black;
+	border: 1px solid black;
+	font-size: large;
+	color: black;
 }
 
 .accessorize {
-    border: 1px solid black;
-    font-size: large;
-    color: black;
+	border: 1px solid black;
+	font-size: large;
+	color: black;
 }
 
 .closed {
-    border: 1px solid lightgrey;
-    font-size: large;
-    background-color: lightgrey;
+	border: 1px solid lightgrey;
+	font-size: large;
+	background-color: lightgrey;
 	color: grey;
 }
 
 .open-rules {
-    border: 1px solid black;
-    font-size: large;
+	border: 1px solid black;
+	font-size: large;
 }
 
 main {
-    display: grid;
-    margin: 0 auto;
-    padding: 10px;
-    justify-content: center;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px 100px 100px 80px;
-    row-gap: 5px;
-    column-gap: 10px;
+	display: grid;
+	margin: 0 auto;
+	padding: 10px;
+	justify-content: center;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: 100px 100px 100px 100px 100px 100px 80px;
+	row-gap: 5px;
+	column-gap: 10px;
 }
 
 form {
-    padding: 30px;
-    text-align: center;
-    justify-content: center;
+	padding: 30px;
+	text-align: center;
+	justify-content: center;
 }
-
 
 .incorrect-guesses {
-    background-color: lightcoral;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 4;
-    text-align: center;
+	background-color: rgb(255, 150, 50, 0.9);
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 4;
+	text-align: center;
 }
 
+.incorrect-ul p {
+	position: relative;
+	font-size: 17px;
+	right: 20px;
+	text-align: center;
+}
 .correct-guesses {
-    background-color: lightblue;
-    grid-row: 6 / span 1;
-    grid-column: 1 / span 3;
+	background-color: lightblue;
+	grid-row: 6 / span 1;
+	grid-column: 1 / span 3;
 }
 
 .correct-ul {
-    justify-content: space-around;
+	justify-content: space-around;
 }
 
 .submit-form {
-    background-color: lightyellow;
-    grid-row: 5 / span 1;
-    grid-column: 1 / span 3;
+	background-color: lightyellow;
+	grid-row: 5 / span 1;
+	grid-column: 1 / span 3;
 }
 
 .input {
-    height: 30px;
-    border: 2px solid lightgrey;
-    background-color: lightgrey;
-    font-size: large;
-    text-align: center;
-    color: grey;
-    text-transform: capitalize;
+	height: 30px;
+	border: 2px solid lightgrey;
+	background-color: lightgrey;
+	font-size: large;
+	text-align: center;
+	color: grey;
+	text-transform: capitalize;
 }
 .input-open {
-    height: 30px;
-    border: 2px solid black;
-    background-color: white;
-    font-size: large;
-    text-align: center;
-    color: black;
-    text-transform: capitalize;
+	height: 30px;
+	border: 2px solid black;
+	background-color: white;
+	font-size: large;
+	text-align: center;
+	color: black;
+	text-transform: capitalize;
 }
-
 
 .flower {
-    background-color: lightgreen;
-    grid-row: 1 / span 4;
-    grid-column: 2 / span 2;
-    text-align: center;
+	background-color: lightgreen;
+	grid-row: 1 / span 4;
+	grid-column: 2 / span 2;
+	text-align: center;
 }
 .win-count {
-    background-color: lightslategray;
-    text-align: center;
-    padding-bottom: 10px;
-    grid-row: 7 / span 1fr;
-    grid-column: 1 / span 1fr;
+	background-color: lightslategray;
+	text-align: center;
+	padding-bottom: 10px;
+	grid-row: 7 / span 1fr;
+	grid-column: 1 / span 1fr;
 }
 
 .loss-count {
-    background-color: lightsalmon;
-    grid-row: 7 / span 1;
-    grid-column: 3 / span 1;
-    text-align: center;
+	background-color: lightsalmon;
+	grid-row: 7 / span 1;
+	grid-column: 3 / span 1;
+	text-align: center;
 }
 
 .word-title {
-    text-align: center;
+	text-align: center;
 }
 
 .answer {
-    display: inline;
-    text-transform: capitalize;
-    font-size: 30px;
-    padding: 15px;
-    justify-content: space-evenly;
+	display: inline;
+	text-transform: capitalize;
+	font-size: 30px;
+	padding: 15px;
+	justify-content: space-evenly;
 }
 
 .reset-game {
-    background-color: brown;
-    text-align: center;
-    grid-row: 7 / span 1fr;
-    grid-column: 2 / span 1fr;
+	background-color: brown;
+	text-align: center;
+	grid-row: 7 / span 1fr;
+	grid-column: 2 / span 1fr;
 }
 
 .reset-button {
-    font-size: large;
+	font-size: large;
 }
 
 /**** Flower Parts CSS ****/
 
-.flower-parts {
-
-}
-
 /* Body */
 
 #stem {
-    position: relative;
-    left: 95px;
-    bottom: 420px;
-    background-color: green;
-    width: 15px;
-    height: 210px;
-    border-radius: 5px;
+	position: relative;
+	left: 95px;
+	bottom: 420px;
+	background-color: green;
+	width: 15px;
+	height: 210px;
+	border-radius: 5px;
 }
 
 #bulb {
-    position: relative;
-    left: 63px;
-    bottom: 400px;
-    background-color: yellow;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    z-index: 1;
+	position: relative;
+	left: 63px;
+	bottom: 400px;
+	background-color: yellow;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	z-index: 1;
 }
 
 #left-arm {
-    position: relative;
-    transform: rotate(45deg);
-    left: 25px;
-    bottom: 560px;
-    background-color: green;
-    width: 60px;
-    height: 60px;
-    border-radius: 80px 0px;
+	position: relative;
+	transform: rotate(45deg);
+	left: 25px;
+	bottom: 560px;
+	background-color: green;
+	width: 60px;
+	height: 60px;
+	border-radius: 80px 0px;
 }
 #right-arm {
-    position: relative;
-    transform: rotate(225deg);
-    left: 120px;
-    bottom: 620px;
-    background-color: green;
-    width: 60px;
-    height: 60px;
-    border-radius: 80px 0px;
+	position: relative;
+	transform: rotate(225deg);
+	left: 120px;
+	bottom: 620px;
+	background-color: green;
+	width: 60px;
+	height: 60px;
+	border-radius: 80px 0px;
 }
 
 /* Petals */
 
 #petal1 {
-    position: relative;
-    transform: rotate(135deg);
-    left: 73px;
-    top: 15px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	transform: rotate(135deg);
+	left: 73px;
+	top: 15px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 #petal2 {
-    position: relative;
-    left: 122px;
-    bottom: 20px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	left: 122px;
+	bottom: 20px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 #petal3 {
-    position: relative;
-    transform: rotate(90deg);
-    left: 25px;
-    bottom: 80px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	transform: rotate(90deg);
+	left: 25px;
+	bottom: 80px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 #petal4 {
-    position: relative;
-    transform: rotate(45deg);
-    left: 15px;
-    bottom: 90px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 80px 0px;
+	position: relative;
+	transform: rotate(45deg);
+	left: 15px;
+	bottom: 90px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 80px 0px;
 }
 #petal5 {
-    position: relative;
-    left: 25px;
-    bottom: 100px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	left: 25px;
+	bottom: 100px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 #petal6 {
-    position: relative;
-    transform: rotate(45deg);
-    left: 138px;
-    bottom: 211px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	transform: rotate(45deg);
+	left: 138px;
+	bottom: 211px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 #petal7 {
-    position: relative;
-    transform: rotate(135deg);
-    left: 73px;
-    bottom: 205px;
-    z-index: 1;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	transform: rotate(135deg);
+	left: 73px;
+	bottom: 205px;
+	z-index: 1;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 #petal8 {
-    position: relative;
-    transform: rotate(90deg);
-    left: 120px;
-    bottom: 285px;
-    background-color: lemonchiffon;
-    width: 60px;
-    height: 60px;
-    border-radius: 800px 0px;
+	position: relative;
+	transform: rotate(90deg);
+	left: 120px;
+	bottom: 285px;
+	background-color: lemonchiffon;
+	width: 60px;
+	height: 60px;
+	border-radius: 800px 0px;
 }
 
 /* Bulb parts */
 
 #left-eye {
-    position: relative;
-    left: 20px;
-    top: 25px;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
+	position: relative;
+	left: 20px;
+	top: 25px;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border-radius: 50%;
 }
 #right-eye {
-    position: relative;
-    left: 50px;
-    top: 15px;
-    background-color: black;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+	position: relative;
+	left: 50px;
+	top: 15px;
+	background-color: black;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
 }
 
 #smile {
-    position: relative;
-    left: 10px;
-    top: 10px;
-    width: 50px;
-    height: 20px;
-    border: 6px solid;
-    border-radius: 100%;
-    border-color: transparent transparent black transparent;
+	position: relative;
+	left: 10px;
+	top: 10px;
+	width: 50px;
+	height: 20px;
+	border: 6px solid;
+	border-radius: 100%;
+	border-color: transparent transparent black transparent;
 }
 #frown {
-    position: relative;
-    left: 10px;
-    top: 30px;
-    width: 50px;
-    height: 20px;
-    border: 6px solid;
-    border-radius: 100%;
-    border-color: black transparent transparent transparent;
+	position: relative;
+	left: 10px;
+	top: 30px;
+	width: 50px;
+	height: 20px;
+	border: 6px solid;
+	border-radius: 100%;
+	border-color: black transparent transparent transparent;
 }
 
 #surprise {
-    position: relative;
-    left: 27px;
-    top: 25px;
-    width: 15px;
-    height: 15px;
-    border: 6px solid;
-    border-radius: 50%;
-    background-color: white;
-    border-color: black ;
+	position: relative;
+	left: 27px;
+	top: 25px;
+	width: 15px;
+	height: 15px;
+	border: 6px solid;
+	border-radius: 50%;
+	background-color: white;
+	border-color: black;
 }
 #happy {
-    position: relative;
-    background-color: white;
-    left: 19px;
-    top: 25px;
-    width: 30px;
-    height: 15px;
-    border: 6px solid;
-    border-radius: 10px 10px 100px 100px;
-    border-color: black ;
+	position: relative;
+	background-color: white;
+	left: 19px;
+	top: 25px;
+	width: 30px;
+	height: 15px;
+	border: 6px solid;
+	border-radius: 10px 10px 100px 100px;
+	border-color: black;
 }
 
 /* Flower Accessories */
 
 #brim {
-    visibility: hidden;
-    position: relative;
-    z-index: 12;
-    left: 47px;
-    bottom: 880px;
-    width: 100px;
-    border: 6px solid;
-    border-radius: 40%;
-    border-color: rgb(131, 85, 1);
+	visibility: hidden;
+	position: relative;
+	z-index: 12;
+	left: 47px;
+	bottom: 880px;
+	width: 100px;
+	border: 6px solid;
+	border-radius: 40%;
+	border-color: rgb(131, 85, 1);
 }
 
 #base-left {
-    visibility: hidden;
-    position: relative;
-    z-index: 1;
-    transform: rotate(180deg);
-    background-color: rgb(143, 93, 0);
-    left: 70px;
-    bottom: 835px;
-    width: 40px;
-    height: 35px;
-    border: 3px solid;
-    border-radius: 10px 10px 100px 200px;
-    border-color: rgb(131, 85, 1) ;
+	visibility: hidden;
+	position: relative;
+	z-index: 1;
+	transform: rotate(180deg);
+	background-color: rgb(143, 93, 0);
+	left: 70px;
+	bottom: 835px;
+	width: 40px;
+	height: 35px;
+	border: 3px solid;
+	border-radius: 10px 10px 100px 200px;
+	border-color: rgb(131, 85, 1);
 }
 #base-right {
-    visibility: hidden;
-    position: relative;
-    z-index: 2;
-    transform: rotate(180deg);
-    background-color: rgb(143, 93, 0);
-    left: 90px;
-    bottom: 876px;
-    width: 40px;
-    height: 35px;
-    border: 3px solid;
-    border-radius: 10px 10px 200px 100px;
-    border-color: rgb(131, 85, 1) transparent rgb(131, 85, 1) rgb(131, 85, 1);
+	visibility: hidden;
+	position: relative;
+	z-index: 2;
+	transform: rotate(180deg);
+	background-color: rgb(143, 93, 0);
+	left: 90px;
+	bottom: 876px;
+	width: 40px;
+	height: 35px;
+	border: 3px solid;
+	border-radius: 10px 10px 200px 100px;
+	border-color: rgb(131, 85, 1) transparent rgb(131, 85, 1) rgb(131, 85, 1);
 }
 #moustache-left {
-    visibility: hidden;
-    position: relative;
-    transform: rotate(80deg);
-    z-index: 2;
-    left: 87px;
-    bottom: 871px;
-    background-color: rgb(110, 85, 1);
-    width: 10px;
-    height: 30px;
-    border-radius: 800px 0px;
+	visibility: hidden;
+	position: relative;
+	transform: rotate(80deg);
+	z-index: 2;
+	left: 87px;
+	bottom: 871px;
+	background-color: rgb(110, 85, 1);
+	width: 10px;
+	height: 30px;
+	border-radius: 800px 0px;
 }
 #moustache-right {
-    visibility: hidden;
-    position: relative;
-    transform: rotate(280deg);
-    z-index: 2;
-    left: 110px;
-    bottom: 901px;
-    background-color: rgb(110, 85, 1);
-    width: 10px;
-    height: 30px;
-    border-radius: 0px 800px ;
+	visibility: hidden;
+	position: relative;
+	transform: rotate(280deg);
+	z-index: 2;
+	left: 110px;
+	bottom: 901px;
+	background-color: rgb(110, 85, 1);
+	width: 10px;
+	height: 30px;
+	border-radius: 0px 800px;
+}
+
+#helmet-top {
+	visibility: hidden;
+	width: 75px;
+	height: 75px;
+	position: relative;
+	bottom: 969px;
+	left: 56px;
+	border: 10px solid lightgrey;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+}
+
+#helmet-base {
+	visibility: hidden;
+	width: 53px;
+	position: relative;
+	bottom: 994px;
+	left: 62px;
+	border: 15px solid lightgrey;
+	border-radius: 10%;
+	border-color: transparent lightgrey lightgrey lightgrey;
+	z-index: 1;
 }
