@@ -1,6 +1,6 @@
 //// Variables
 
-const word = ['F', 'I', 'N', 'D', 'S'];
+const word = ['H', 'O', 'W', 'D', 'Y'];
 const word2 = ['F', 'L', 'O', 'W', 'E', 'R']
 const correctUl = document.querySelector('.correct-ul');
 const incorrectUl = document.querySelector('.incorrect-ul');
@@ -9,6 +9,17 @@ const input = document.querySelector('.input');
 const startButton = document.querySelector('.start-button');
 const rulesButton = document.querySelector('.open-rules')
 const resetButton = document.querySelector('.reset-button')
+const guessReaction = document.querySelector('.guess-reaction')
+
+
+const accessoryButton = document.querySelector('.accessorize')
+const cowboy = document.querySelectorAll('.cowboy')
+const baseLeft = document.querySelector('#base-left')
+const baseRight = document.querySelector('#base-right')
+const moustacheLeft = document.querySelector('#moustache-left')
+const moustacheRight = document.querySelector('#moustache-right')
+const brim = document.querySelector('#brim')
+
 const smile = document.querySelector('#smile')
 const petal1 = document.querySelector('#petal1')
 const petal2 = document.querySelector('#petal2')
@@ -28,6 +39,8 @@ counter = 0;
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
+	checkCorrectGuess()
+	checkIncorrectGuess()
 	submitGuess();
 	checkWin();
 });
@@ -38,8 +51,8 @@ startButton.addEventListener('click', (event) => {
 	word.forEach(makeUnderScore);
 	input.toggleAttribute('disabled')
 	startButton.toggleAttribute('disabled')
-	input.style.backgroundColor = 'white'
-	input.style.color = 'black'
+	startButton.setAttribute('class', 'closed')
+	input.setAttribute('class', 'input-open')
 });
 
 // Show Rules event listener
@@ -54,6 +67,13 @@ resetButton.addEventListener('click', (event) => {
 	location.reload()
 })
 
+// Accessory switch event listener
+
+accessoryButton.addEventListener('click', (event) => {
+	event.preventDefault()
+	showCowboy()
+})
+
 ///// Functions /////
 
 // Check win condition function
@@ -61,9 +81,11 @@ resetButton.addEventListener('click', (event) => {
 function checkWin() {
 	if (answer.length === word.length) {
 		smile.setAttribute('id', 'happy')
-		alert('You Win');
+		guessReaction.innerText = 'You win!'
+		input.toggleAttribute('disabled');
 	} else if(wrongAnswers.length === 8) {
-		alert('You lose. Try again!')
+		guessReaction.innerText = 'You lose. Try again!'
+		input.toggleAttribute('disabled');
 	}
 }
 
@@ -72,30 +94,35 @@ function checkWin() {
 function submitGuess() {
 		if (input.value.toUpperCase() === word[0]) {
 			answer.push(input.value.toUpperCase());
+			guessCorrect()
 			smile.setAttribute('id', 'smile');
 			let key0 = document.getElementById('key0')
 			key0.innerText = word[0]
 			input.value = '';
 		} else if (input.value.toUpperCase() === word[1]) {
 			answer.push(input.value.toUpperCase());
+			guessCorrect()
 			smile.setAttribute('id', 'smile');
 			let key1 = document.getElementById('key1');
 			key1.innerText = word[1];
 			input.value = '';
 		} else if (input.value.toUpperCase() === word[2]) {
 			answer.push(input.value.toUpperCase());
+			guessCorrect()
 			smile.setAttribute('id', 'smile');
 			let key2 =document.getElementById('key2');
 			key2.innerText = word[2];
 			input.value = '';
 		} else if (input.value.toUpperCase() === word[3]) {
 			answer.push(input.value.toUpperCase());
+			guessCorrect()
 			smile.setAttribute('id', 'smile');
 			let key3 = document.getElementById('key3');
 			key3.innerText = word[3];
 			input.value = '';
 		} else if (input.value.toUpperCase() === word[4]) {
 			answer.push(input.value.toUpperCase());
+			guessCorrect()
 			smile.setAttribute('id', 'smile');
 			let key4 = document.getElementById('key4');
 			key4.innerText = word[4];
@@ -159,6 +186,7 @@ function submitGuess() {
 
 function incorrectGuess() {
 	wrongAnswers.push(input.value.toUpperCase());
+	guessIncorrect();
 	removePetal();
 	let p2 = document.createElement('p');
 	p2.innerText = input.value.toUpperCase();
@@ -176,6 +204,28 @@ function makeUnderScore() {
 	correctUl.appendChild(underscore);
 }
 
+// Check for double guesses function
+
+function checkCorrectGuess() {
+	for (let i = 0; i < answer.length; i++) {
+		if(input.value.toUpperCase() === answer[i]) {
+			alert('You have already guessed this letter!')
+			input.value = ''
+		}
+	}
+}
+
+// Check for double INCORRECT guesses function
+
+function checkIncorrectGuess() {
+	for (let i = 0; i < wrongAnswers.length; i++) {
+		if (input.value.toUpperCase() === wrongAnswers[i]) {
+			alert('You have already guessed this letter!');
+			input.value = '';
+		}
+	}
+}
+
 // Show Rules
 
 function showRules () {
@@ -183,6 +233,8 @@ function showRules () {
 		`Welcome to Flower Time!\n \n In order to keep the flower tall and happy, you must guess its favorite word! \n\n Here are the rules: \n - In the 'Correct' box, input your guess for which letters might be found in the magic word. \n - If your guess is correct, the flower will remain intact. \n - If you guess wrong, the flower will lose a petal. \n - If the flower loses all its petals, the game is over. \n - If all of your guesses are correct and you spell the magic word, you win! \n - When you are ready, press start game. Good Luck!\n`
 	);
 }
+
+// Remeove Petals function
 
 function removePetal() {
 	if (wrongAnswers.length === 1) {
@@ -210,7 +262,29 @@ function removePetal() {
 	} else if (wrongAnswers.length === 8) {
 		petal8.style.backgroundColor = 'lightgreen';
 		smile.setAttribute('id', 'frown')
-		// petal8.style.top = '30px'
-		// petal8.style.borderColor = 'black transparent transparent transparent'
 	}console.log(wrongAnswers)
+}
+
+
+// Show Cowboy Gear Function
+
+function showCowboy() {
+	accessoryButton.setAttribute('class', 'closed')
+	brim.style.visibility = 'visible'
+	baseLeft.style.visibility = 'visible'
+	baseRight.style.visibility = 'visible'
+	moustacheLeft.style.visibility = 'visible'
+	moustacheRight.style.visibility = 'visible'
+}
+
+// Guess Reaction: Correct
+
+function guessCorrect() {
+	guessReaction.innerText = `Yay, ${input.value.toUpperCase()} was correct!`
+}
+
+// Guess Reaction: Incorrect
+
+function guessIncorrect() {
+	guessReaction.innerText = `Oh no! ${input.value.toUpperCase()} was incorrect!`;
 }

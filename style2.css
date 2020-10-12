@@ -10,6 +10,19 @@ header {
     color: black;
 }
 
+.accessorize {
+    border: 1px solid black;
+    font-size: large;
+    color: black;
+}
+
+.closed {
+    border: 1px solid lightgrey;
+    font-size: large;
+    background-color: lightgrey;
+	color: grey;
+}
+
 .open-rules {
     border: 1px solid black;
     font-size: large;
@@ -32,10 +45,6 @@ form {
     justify-content: center;
 }
 
-.input {
-    text-align: center;
-    background-color: white;
-}
 
 .incorrect-guesses {
     background-color: lightcoral;
@@ -62,9 +71,20 @@ form {
 
 .input {
     height: 30px;
-    border: 2px solid black;
+    border: 2px solid lightgrey;
     background-color: lightgrey;
-    color: lightgrey;
+    font-size: large;
+    text-align: center;
+    color: grey;
+    text-transform: capitalize;
+}
+.input-open {
+    height: 30px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: large;
+    text-align: center;
+    color: black;
     text-transform: capitalize;
 }
 
@@ -295,6 +315,7 @@ form {
     height: 15px;
     border: 6px solid;
     border-radius: 50%;
+    background-color: white;
     border-color: black ;
 }
 #happy {
@@ -307,4 +328,71 @@ form {
     border: 6px solid;
     border-radius: 10px 10px 100px 100px;
     border-color: black ;
+}
+
+/* Flower Accessories */
+
+#brim {
+    visibility: hidden;
+    position: relative;
+    z-index: 12;
+    left: 47px;
+    bottom: 880px;
+    width: 100px;
+    border: 6px solid;
+    border-radius: 40%;
+    border-color: rgb(131, 85, 1);
+}
+
+#base-left {
+    visibility: hidden;
+    position: relative;
+    z-index: 1;
+    transform: rotate(180deg);
+    background-color: rgb(143, 93, 0);
+    left: 70px;
+    bottom: 835px;
+    width: 40px;
+    height: 35px;
+    border: 3px solid;
+    border-radius: 10px 10px 100px 200px;
+    border-color: rgb(131, 85, 1) ;
+}
+#base-right {
+    visibility: hidden;
+    position: relative;
+    z-index: 2;
+    transform: rotate(180deg);
+    background-color: rgb(143, 93, 0);
+    left: 90px;
+    bottom: 876px;
+    width: 40px;
+    height: 35px;
+    border: 3px solid;
+    border-radius: 10px 10px 200px 100px;
+    border-color: rgb(131, 85, 1) transparent rgb(131, 85, 1) rgb(131, 85, 1);
+}
+#moustache-left {
+    visibility: hidden;
+    position: relative;
+    transform: rotate(80deg);
+    z-index: 2;
+    left: 87px;
+    bottom: 871px;
+    background-color: rgb(110, 85, 1);
+    width: 10px;
+    height: 30px;
+    border-radius: 800px 0px;
+}
+#moustache-right {
+    visibility: hidden;
+    position: relative;
+    transform: rotate(280deg);
+    z-index: 2;
+    left: 110px;
+    bottom: 901px;
+    background-color: rgb(110, 85, 1);
+    width: 10px;
+    height: 30px;
+    border-radius: 0px 800px ;
 }
