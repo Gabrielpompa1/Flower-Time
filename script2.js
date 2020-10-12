@@ -1,6 +1,7 @@
 //// Variables
 
 const word = ['F', 'I', 'N', 'D', 'S'];
+const word2 = ['F', 'L', 'O', 'W', 'E', 'R']
 const correctUl = document.querySelector('.correct-ul');
 const incorrectUl = document.querySelector('.incorrect-ul');
 const form = document.querySelector('.form');
@@ -35,6 +36,10 @@ form.addEventListener('submit', (event) => {
 
 startButton.addEventListener('click', (event) => {
 	word.forEach(makeUnderScore);
+	input.toggleAttribute('disabled')
+	startButton.toggleAttribute('disabled')
+	input.style.backgroundColor = 'white'
+	input.style.color = 'black'
 });
 
 // Show Rules event listener
@@ -55,13 +60,14 @@ resetButton.addEventListener('click', (event) => {
 
 function checkWin() {
 	if (answer.length === word.length) {
+		smile.setAttribute('id', 'happy')
 		alert('You Win');
 	} else if(wrongAnswers.length === 8) {
 		alert('You lose. Try again!')
 	}
 }
 
-// Submit guess function
+// Word 1 submit guess function
 
 function submitGuess() {
 		if (input.value.toUpperCase() === word[0]) {
@@ -95,26 +101,69 @@ function submitGuess() {
 			key4.innerText = word[4];
 			input.value = '';
 		} else {
-			wrongAnswers.push(input.value.toUpperCase());
-			removePetal()
-			let p2 = document.createElement('p')
-			p2.innerText = input.value.toUpperCase()
-			incorrectUl.appendChild(p2)
-			input.value = ''
+			incorrectGuess()
 		}
 }
+
+// Word 2 Submit Guess Function
+
+// function submitGuess() {
+// 	if (input.value.toUpperCase() === word2[0]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key0 = document.getElementById('key0');
+// 		key0.innerText = word2[0];
+// 		input.value = '';
+// 	} else if (input.value.toUpperCase() === word2[1]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key1 = document.getElementById('key1');
+// 		key1.innerText = word2[1];
+// 		input.value = '';
+// 	} else if (input.value.toUpperCase() === word2[2]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key2 = document.getElementById('key2');
+// 		key2.innerText = word2[2];
+// 		input.value = '';
+// 	} else if (input.value.toUpperCase() === word2[3]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key3 = document.getElementById('key3');
+// 		key3.innerText = word2[3];
+// 		input.value = '';
+// 	} else if (input.value.toUpperCase() === word2[4]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key4 = document.getElementById('key4');
+// 		key4.innerText = word2[4];
+// 		input.value = '';
+// 	} else if (input.value.toUpperCase() === word2[5]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key5 = document.getElementById('key5');
+// 		key5.innerText = word2[5];
+// 		input.value = '';
+// 	} else if (input.value.toUpperCase() === word2[6]) {
+// 		answer.push(input.value.toUpperCase());
+// 		smile.setAttribute('id', 'smile');
+// 		let key6 = document.getElementById('key6');
+// 		key6.innerText = word2[6];
+// 		input.value = '';
+// 	} else {
+// 		incorrectGuess();
+// 	}
+// }
+
 // Incorrect guess function
 
 function incorrectGuess() {
-	// for (let i = 0; i < word.length; i++) {
-	// if(input.value.toUpperCase() !== word[0] || word[1] || word[2] || word[3] || word[4]) {
-	// 	console.log('This is wrong')
-	// }
-	// }
 	wrongAnswers.push(input.value.toUpperCase());
+	removePetal();
 	let p2 = document.createElement('p');
 	p2.innerText = input.value.toUpperCase();
 	incorrectUl.appendChild(p2);
+	input.value = '';
 }
 
 // Generate underscore spots for letter choices
