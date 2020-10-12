@@ -270,3 +270,24 @@ input {
     border-radius: 100%;
     border-color: transparent transparent black transparent;
 }
+#frown {
+    position: relative;
+    left: 10px;
+    top: 30px;
+    width: 50px;
+    height: 20px;
+    border: 6px solid;
+    border-radius: 100%;
+    border-color: black transparent transparent transparent;
+}
+
+#surprise {
+    position: relative;
+    left: 27px;
+    top: 25px;
+    width: 15px;
+    height: 15px;
+    border: 6px solid;
+    border-radius: 50%;
+    border-color: black ;
+}
