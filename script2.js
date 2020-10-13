@@ -5,11 +5,20 @@ const word2 = ['F', 'L', 'O', 'W', 'E', 'R'];
 const correctUl = document.querySelector('.correct-ul');
 const incorrectUl = document.querySelector('.incorrect-ul');
 const form = document.querySelector('.form');
+const submitForm = document.querySelector('.submit-form');
 const input = document.querySelector('.input');
 const startButton = document.querySelector('.start-button');
 const rulesButton = document.querySelector('.open-rules');
 const resetButton = document.querySelector('.reset-button');
 const guessReaction = document.querySelector('.guess-reaction');
+
+const header = document.querySelector('.header')
+const flower = document.querySelector('.flower')
+const correctDiv = document.querySelector('.correct-guesses')
+const incorrectDiv = document.querySelector('.incorrect-guesses')
+
+const winCountDiv = document.querySelector('.win-count')
+const lossCount = document.querySelector('.loss-count')
 
 const costumeSubmit = document.querySelector('.costume-submit');
 const selectCostume = document.querySelector('.accessorize');
@@ -30,7 +39,9 @@ const helmetBase = document.querySelector('#helmet-base');
 const leftArm = document.querySelector('#left-arm');
 const rightArm = document.querySelector('#right-arm');
 
+const bulb = document.querySelector('#bulb')
 const smile = document.querySelector('#smile');
+const stem = document.querySelector('#stem')
 const petal1 = document.querySelector('#petal1');
 const petal2 = document.querySelector('#petal2');
 const petal3 = document.querySelector('#petal3');
@@ -42,7 +53,8 @@ const petal8 = document.querySelector('#petal8');
 
 let wrongAnswers = [];
 let answer = [];
-counter = 0;
+let counter = 0;
+let counter2 = 1
 ///// Event Listeners /////
 
 // Form event listener
@@ -82,8 +94,9 @@ costumeSubmit.addEventListener('click', (event) => {
 		showCowboy();
 	} else if (selectCostume.value === 'spaceman') {
 		showSpaceSuit();
+	} else if (selectCostume.value === 'flower') {
+		location.reload()
 	}
-	// console.log(selectCostume.value)
 });
 
 ///// Functions /////
@@ -92,6 +105,7 @@ costumeSubmit.addEventListener('click', (event) => {
 
 function checkWin() {
 	if (answer.length === word.length) {
+		// winCount()
 		smile.setAttribute('id', 'happy');
 		guessReaction.innerText = 'You win!';
 		input.toggleAttribute('disabled');
@@ -240,6 +254,20 @@ function checkDoubleIncorrect() {
 	}
 }
 
+// Win Count function
+
+function winCount () {
+	let p3 = document.createElement('p')
+	p3.innerText = counter2 ++
+	winCountDiv.appendChild(p3)
+}
+
+// Win Count function
+
+// function lossCount () {
+
+// }
+
 // Guess Reaction: Correct
 
 function guessCorrect() {
@@ -264,29 +292,29 @@ function showRules() {
 
 function removePetal() {
 	if (wrongAnswers.length === 1) {
-		petal1.style.backgroundColor = 'lightgreen';
+		petal1.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 	} else if (wrongAnswers.length === 2) {
-		petal2.style.backgroundColor = 'lightgreen';
+		petal2.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 	} else if (wrongAnswers.length === 3) {
-		petal3.style.backgroundColor = 'lightgreen';
+		petal3.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 	} else if (wrongAnswers.length === 4) {
-		petal4.style.backgroundColor = 'lightgreen';
+		petal4.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 	} else if (wrongAnswers.length === 5) {
-		petal5.style.backgroundColor = 'lightgreen';
+		petal5.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 	} else if (wrongAnswers.length === 6) {
-		petal6.style.backgroundColor = 'lightgreen';
+		petal6.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 	} else if (wrongAnswers.length === 7) {
-		petal7.style.backgroundColor = 'lightgreen';
+		petal7.style.visibility = 'hidden';
 		smile.setAttribute('id', 'surprise');
 		petal7.style.zIndex = '0';
 	} else if (wrongAnswers.length === 8) {
-		petal8.style.backgroundColor = 'lightgreen';
+		petal8.style.visibility = 'hidden';
 		smile.setAttribute('id', 'frown');
 	}
 	console.log(wrongAnswers);
@@ -309,13 +337,23 @@ function showCowboy() {
 function showSpaceSuit() {
 	helmetTop.style.visibility = 'visible';
 	helmetBase.style.visibility = 'visible';
-	stem.style.backgroundColor = 'lightgrey';
-	leftArm.style.backgroundColor = 'lightgrey';
-	rightArm.style.backgroundColor = 'lightgrey';
+	helmetTop.style.borderColor = 'rgb(130, 255, 255)';
+	helmetTop.style.backgroundColor = 'rgba(180, 0, 95, 0.7)';
+	helmetBase.style.borderColor ='transparent rgb(130, 255, 255) rgb(130, 255, 255) rgb(130, 255, 255)';
+	
+	bulb.style.backgroundColor = 'rgb(255, 55, 255)';
+	stem.style.backgroundColor = 'rgb(130, 255, 255)';
+	leftArm.style.backgroundColor = 'rgb(130, 255, 255)';
+	rightArm.style.backgroundColor = 'rgb(130, 255, 255)';
+	
 	html.style.backgroundImage = 'url(spacesuitset2.jpg)';
-	html.style.backgroundColor = '';
+	html.style.backgroundColor = 'purple';
+	header.style.backgroundColor = 'rgba(0, 230, 50, 0.9)'
+	header.style.borderColor = 'rgba(50, 255, 50, 0.9)';
+	submitForm.style.backgroundColor = 'rgba(180, 0, 95, 0.9)';
+	flower.style.backgroundColor = 'rgba(170, 0, 255, 0.9)';
+	incorrectDiv.style.backgroundColor = 'rgb(180, 255, 255, 0.9)';
+	correctDiv.style.backgroundColor = 'rgba(0, 230, 50, 0.9)';
+	// correctDiv.style.borderColor = 'rgba(50, 255, 50, 0.9)';
+
 }
-
-// Clear costumes function
-
-function clearCostumes() {}
