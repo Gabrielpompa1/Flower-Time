@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Flower Time</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Flower Time</h1>
+        
+        <!-- Accessorize! -->
+        
+        <label>Select A Theme</label>
+        <select name="costumes" class="accessorize">
+            <option value="select">Select...</option>
+            <option value="flower">Flower</option>
+            <option value="cowboy" class="cowboy-option">Western</option>
+            <option value="spaceman" class="space-option">Space</option>
+        </select>
+        <input class="costume-submit" type="submit" value="Style!">
+        
+        <!-- Reset Game Button -->
+        <button class="reset-button">Reset</button><br>
+        
+        <!-- This button opens up the rules modal -->
+        <button class="open-rules">
+            Open Rules
+        </button>
+        
+
+
+        <!-- Starts and refreshes the game -->
+        <button class="start-button">
+            Start Game
+        </button>
+
+    </header>
+    <main>
+        
+        
+        <!-- Submit form for correct guesses -->
+        <div class="submit-form">
+            <h3>Enter your guess here!</h3>
+            <form class="form" action="submit">
+                <input class="input" maxlength="1" disabled>
+            </form>
+        </div>
+
+        <!-- Correct guesses box -->
+        <div class="correct-guesses">
+            <h3 class="word-title">MAGIC WORD</h3>
+            <div class="phrase">
+                <ul class="correct-ul"></ul>
+            </div>
+            
+        </div>
+
+        <!-- Incorrect Guesses div -->
+        <div class="incorrect-guesses">
+            <h3>WRONG GUESSES</h3>
+            <ul class="incorrect-ul"></ul>
+        </div>
+
+        <!-- Flower Box -->
+        <div class="flower">
+            <h3 class="guess-reaction">Guess the magic word!</h3>
+                        
+            <div class="flower-parts" id="petal1"></div>
+            <div class="flower-parts" id="petal2"></div>
+            <div class="flower-parts" id="petal3"></div>
+            <div class="flower-parts" id="petal4"></div>
+            <div class="flower-parts" id="petal5"></div>
+            <div class="flower-parts" id="petal6"></div>
+            <div class="flower-parts" id="petal7"></div>
+            <div class="flower-parts" id="petal8"></div>
+            <div class="flower-parts" id="bulb">
+                
+                <div class="flower-parts" id="left-eye"></div>
+                
+                <div class="flower-parts" id="right-eye"></div>
+                
+                
+                <div class="flower-parts" id="smile"></div>
+                
+            </div>
+
+            <div class="flower-parts" id="stem"></div>
+            <div class="flower-parts" id="left-arm"></div>
+            <div class="flower-parts" id="right-arm"></div>
+            
+            <!-- Cowboy stuff -->
+            
+            <div class="cowboy" id="base-left"></div>
+            <div class="cowboy" id="base-right"></div>
+
+            <div class="cowboy" id="brim"></div>
+
+            <!-- Moustache Parts -->
+            <div class="cowboy" id="moustache-left"></div>
+            <div class="cowboy" id="moustache-right"></div>
+
+            <!-- Space Helmet -->
+            <div class="space-suit" id="helmet-top"></div>
+            <div class="space-suit" id="helmet-base"></div>
+        </div>
+
+        <script src="script2.js"></script>
+    </main>
+</body>
+
+</html>
