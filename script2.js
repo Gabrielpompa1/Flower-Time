@@ -54,7 +54,7 @@ const petal8 = document.querySelector('#petal8');
 let wrongAnswers = [];
 let answer = [];
 let counter = 0;
-let counter2 = 1
+
 ///// Event Listeners /////
 
 // Form event listener
@@ -105,7 +105,6 @@ costumeSubmit.addEventListener('click', (event) => {
 
 function checkWin() {
 	if (answer.length === word.length) {
-		// winCount()
 		smile.setAttribute('id', 'happy');
 		guessReaction.innerText = 'You win!';
 		input.toggleAttribute('disabled');
@@ -156,8 +155,6 @@ function submitGuess() {
 	} else {
 		incorrectGuess();
 	}
-	console.log(answer);
-	console.log(wrongAnswers);
 }
 
 // Word 2 Submit Guess Function
@@ -317,7 +314,6 @@ function removePetal() {
 		petal8.style.visibility = 'hidden';
 		smile.setAttribute('id', 'frown');
 	}
-	console.log(wrongAnswers);
 }
 
 // Show Western Theme
@@ -330,6 +326,20 @@ function showCowboy() {
 	moustacheRight.style.visibility = 'visible';
 	html.style.backgroundImage = 'url(western.jpg)';
 	html.style.backgroundColor = '#f3c086';
+	stem.style.backgroundColor = 'rgb(150, 80, 40)';
+	leftArm.style.backgroundColor = 'rgb(150, 80, 40)';
+	rightArm.style.backgroundColor = 'rgb(150, 80, 40)';
+
+	header.style.backgroundColor = 'rgba(220, 180, 60, 0.8)';
+	header.style.borderColor = 'rgb(170, 110, 0)';
+	submitForm.style.backgroundColor = 'rgba(220, 180, 60, 0.8)';
+	submitForm.style.borderColor = 'rgb(170, 110, 0)';
+	flower.style.backgroundColor = 'rgba(255, 215, 0, 0.8)';
+	flower.style.borderColor = 'rgb(255, 175, 0)';
+	incorrectDiv.style.backgroundColor = 'rgba(100, 225, 0, 0.9)';
+	incorrectDiv.style.borderColor = 'rgb(255, 255, 0)';
+	correctDiv.style.backgroundColor = 'rgba(255, 150, 20, 0.9)';
+	correctDiv.style.borderColor = 'rgb(255, 120, 0)';
 }
 
 // Show Space Theme
@@ -351,9 +361,12 @@ function showSpaceSuit() {
 	header.style.backgroundColor = 'rgba(0, 230, 50, 0.9)'
 	header.style.borderColor = 'rgba(50, 255, 50, 0.9)';
 	submitForm.style.backgroundColor = 'rgba(180, 0, 95, 0.9)';
+	submitForm.style.borderColor = 'rgb(230, 0, 95)';
 	flower.style.backgroundColor = 'rgba(170, 0, 255, 0.9)';
-	incorrectDiv.style.backgroundColor = 'rgb(180, 255, 255, 0.9)';
+	flower.style.borderColor = 'rgb(220, 0, 255)';
+	incorrectDiv.style.backgroundColor = 'rgb(160, 255, 255, 0.9)';
+	incorrectDiv.style.borderColor = 'rgb(0, 225, 255)';
 	correctDiv.style.backgroundColor = 'rgba(0, 230, 50, 0.9)';
-	// correctDiv.style.borderColor = 'rgba(50, 255, 50, 0.9)';
+	correctDiv.style.borderColor = 'rgba(100, 255, 50, 0.9)';
 
 }

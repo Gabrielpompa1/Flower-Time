@@ -12,39 +12,42 @@
 <body>
     <header class="header">
         <h1>Flower Time</h1>
+        
+        <!-- Accessorize! -->
+        
+        <label>Select A Theme</label>
+        <select name="costumes" class="accessorize">
+            <option value="select">Select...</option>
+            <option value="flower">Flower</option>
+            <option value="cowboy" class="cowboy-option">Western</option>
+            <option value="spaceman" class="space-option">Space</option>
+        </select>
+        <input class="costume-submit" type="submit" value="Style!">
+        
+        <!-- Reset Game Button -->
+        <button class="reset-button">Reset</button><br>
+        
+        <!-- This button opens up the rules modal -->
+        <button class="open-rules">
+            Open Rules
+        </button>
+        
 
-        <!-- Starts and refreshes the game -- possibly split these two function up later -->
+
+        <!-- Starts and refreshes the game -->
         <button class="start-button">
             Start Game
         </button>
 
-        <!-- This button opens up the rules modal -->
-        <button class="open-rules">
-            Open Rules
-        </button><br>
-
-        <!-- Reset Game Button -->
-        <button class="reset-button">Reset</button>
-       
-        <!-- Accessorize! -->
-        
-        <label for="costumes">Select A Theme</label>
-            <select name="costumes" class="accessorize">
-                <option value="select">Select...</option>
-                <option value="flower">Flower</option>
-                <option value="cowboy" class="cowboy-option">Western</option>
-                <option value="spaceman" class="space-option">Space</option>
-            </select>
-            
-            <input class="costume-submit" type="submit" value="Accessorize!">
     </header>
     <main>
-
-
+        
+        
         <!-- Submit form for correct guesses -->
         <div class="submit-form">
+            <h3>Enter your guess here!</h3>
             <form class="form" action="submit">
-                <input class="input" type="letter" placeholder="Guess letters here!" maxlength="1" disabled>
+                <input class="input" maxlength="1" disabled>
             </form>
         </div>
 
@@ -54,6 +57,7 @@
             <div class="phrase">
                 <ul class="correct-ul"></ul>
             </div>
+            
         </div>
 
         <!-- Incorrect Guesses div -->
@@ -104,22 +108,6 @@
             <div class="space-suit" id="helmet-top"></div>
             <div class="space-suit" id="helmet-base"></div>
         </div>
-
-        <!-- Win Counter -->
-        <!-- <div class="win-count">
-            <h3>Win Count</h3>
-        </div> -->
-
-        <!-- Loss counter -->
-        <!-- <div class="loss-count">
-            <h3>Loss Count</h3>
-        </div> -->
-        
-        <!-- Reset Game -->
-        <!-- <div class="reset-game">
-            <h3>Reset Game</h3>
-            <button class="reset-button">Reset</button>
-        </div> -->
 
         <script src="script2.js"></script>
     </main>

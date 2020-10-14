@@ -1,4 +1,8 @@
 html {
+    min-width: 360px;
+    min-height: 640px;
+    max-width: 1920px;
+    max-height: 1080px;
 	font-family: 'Indie Flower', cursive;
 	background-image: url('flowerbackground.png');
 	background-size: 30%;
@@ -6,15 +10,20 @@ html {
 	margin: 0 auto;
 }
 header {
+    width: 450px;
+    margin: 0 auto;
 	font-size: large;
 	background-color: rgb(213, 250, 250, 0.9);
-	border-radius: 30%;
+	border-radius: 50%;
 	border: 10px solid rgb(180, 255, 255);
 	line-height: 10px;
 	text-align: center;
 	padding: 10px;
 }
 
+button {
+    margin: 5px;
+}
 header h1 {
 	font-size: 60px;
 }
@@ -28,6 +37,10 @@ header h1 {
 	border: 1px solid black;
 	font-size: large;
 	color: black;
+}
+
+.costume-submit {
+    font-size: large;
 }
 
 .closed {
@@ -47,23 +60,24 @@ main {
 	margin: 0 auto;
 	padding: 10px;
 	justify-content: center;
-	grid-template-columns: 100px 100px 100px;
+	grid-template-columns: 100px 112px 100px;
 	grid-template-rows: 100px 100px 100px 100px 100px 100px 80px;
 	row-gap: 5px;
 	column-gap: 10px;
 }
 
 form {
-	padding: 30px;
+    position: relative;
+    bottom: 15px;
 	text-align: center;
-	justify-content: center;
 }
 
 .incorrect-guesses {
 	background-color: rgb(255, 150, 50, 0.9);
 	grid-column: 1 / span 1;
 	grid-row: 1 / span 4;
-	text-align: center;
+    text-align: center;
+    border: 5px solid rgb(255, 110, 0);
 }
 
 .incorrect-ul p {
@@ -75,17 +89,24 @@ form {
 .correct-guesses {
 	background-color: #aafafae1;
 	grid-row: 6 / span 1;
-	grid-column: 1 / span 3;
+    grid-column: 1 / span 3;
+    border: 5px solid  #0afafae1;
 }
 
 .correct-ul {
-	justify-content: space-around;
+    justify-content: space-around;
+    line-height: 5px;
 }
 
 .submit-form {
-	background-color: rgb(255, 255, 150, 0.9);
+    background-color: rgb(255, 255, 150, 0.9);
 	grid-row: 5 / span 1;
 	grid-column: 1 / span 3;
+    border: 5px solid  rgb(255, 235, 0);
+}
+
+.submit-form h3 {
+    text-align: center;
 }
 
 .input {
@@ -108,24 +129,12 @@ form {
 }
 
 .flower {
-	background-color: rgb(100, 255, 100, 0.9);
+    background-color: rgb(100, 255, 100, 0.9);
+    border: 5px solid rgb(0, 235, 0, 0.9);
 	grid-row: 1 / span 4;
 	grid-column: 2 / span 2;
-	text-align: center;
-}
-.win-count {
-	background-color: lightslategray;
-	text-align: center;
-	padding-bottom: 10px;
-	grid-row: 7 / span 1fr;
-	grid-column: 1 / span 1fr;
-}
+    text-align: center;
 
-.loss-count {
-	background-color: lightsalmon;
-	grid-row: 7 / span 1;
-	grid-column: 3 / span 1;
-	text-align: center;
 }
 
 .word-title {
@@ -140,13 +149,6 @@ form {
 	justify-content: space-evenly;
 }
 
-.reset-game {
-	background-color: brown;
-	text-align: center;
-	grid-row: 7 / span 1fr;
-	grid-column: 2 / span 1fr;
-}
-
 .reset-button {
 	font-size: large;
 }
@@ -158,7 +160,7 @@ form {
 #stem {
 	position: relative;
 	left: 95px;
-	bottom: 420px;
+	bottom: 434px;
 	background-color: green;
 	width: 15px;
 	height: 210px;

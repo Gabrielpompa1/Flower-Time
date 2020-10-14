@@ -47,6 +47,11 @@
 - Play against a computer
 - Show different flower animations
 
-# Starting point
+# Credits
 
-1. 
+- 'Flowers  Bees Petals Plants Honey'
+    Image by <a href="https://pixabay.com/users/canetadigital-18404006/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5630670">Nathalia Nascimento</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5630670">Pixabay</a>
+- Space Background
+    <a href="http://www.freepik.com">Designed by vectorpouch / Freepik</a>
+- Western Background
+    <a href="http://www.freepik.com">Designed by macrovector_official / Freepik</a>
