@@ -12,13 +12,13 @@ const rulesButton = document.querySelector('.open-rules');
 const resetButton = document.querySelector('.reset-button');
 const guessReaction = document.querySelector('.guess-reaction');
 
-const header = document.querySelector('.header')
-const flower = document.querySelector('.flower')
-const correctDiv = document.querySelector('.correct-guesses')
-const incorrectDiv = document.querySelector('.incorrect-guesses')
+const header = document.querySelector('.header');
+const flower = document.querySelector('.flower');
+const correctDiv = document.querySelector('.correct-guesses');
+const incorrectDiv = document.querySelector('.incorrect-guesses');
 
-const winCountDiv = document.querySelector('.win-count')
-const lossCount = document.querySelector('.loss-count')
+const winCountDiv = document.querySelector('.win-count');
+const lossCount = document.querySelector('.loss-count');
 
 const costumeSubmit = document.querySelector('.costume-submit');
 const selectCostume = document.querySelector('.accessorize');
@@ -39,9 +39,9 @@ const helmetBase = document.querySelector('#helmet-base');
 const leftArm = document.querySelector('#left-arm');
 const rightArm = document.querySelector('#right-arm');
 
-const bulb = document.querySelector('#bulb')
+const bulb = document.querySelector('#bulb');
 const smile = document.querySelector('#smile');
-const stem = document.querySelector('#stem')
+const stem = document.querySelector('#stem');
 const petal1 = document.querySelector('#petal1');
 const petal2 = document.querySelector('#petal2');
 const petal3 = document.querySelector('#petal3');
@@ -95,7 +95,7 @@ costumeSubmit.addEventListener('click', (event) => {
 	} else if (selectCostume.value === 'spaceman') {
 		showSpaceSuit();
 	} else if (selectCostume.value === 'flower') {
-		location.reload()
+		location.reload();
 	}
 });
 
@@ -253,10 +253,10 @@ function checkDoubleIncorrect() {
 
 // Win Count function
 
-function winCount () {
-	let p3 = document.createElement('p')
-	p3.innerText = counter2 ++
-	winCountDiv.appendChild(p3)
+function winCount() {
+	let p3 = document.createElement('p');
+	p3.innerText = counter2++;
+	winCountDiv.appendChild(p3);
 }
 
 // Win Count function
@@ -349,16 +349,17 @@ function showSpaceSuit() {
 	helmetBase.style.visibility = 'visible';
 	helmetTop.style.borderColor = 'rgb(130, 255, 255)';
 	helmetTop.style.backgroundColor = 'rgba(180, 0, 95, 0.7)';
-	helmetBase.style.borderColor ='transparent rgb(130, 255, 255) rgb(130, 255, 255) rgb(130, 255, 255)';
-	
+	helmetBase.style.borderColor =
+		'transparent rgb(130, 255, 255) rgb(130, 255, 255) rgb(130, 255, 255)';
+
 	bulb.style.backgroundColor = 'rgb(255, 55, 255)';
 	stem.style.backgroundColor = 'rgb(130, 255, 255)';
 	leftArm.style.backgroundColor = 'rgb(130, 255, 255)';
 	rightArm.style.backgroundColor = 'rgb(130, 255, 255)';
-	
+
 	html.style.backgroundImage = 'url(spacesuitset2.jpg)';
 	html.style.backgroundColor = 'purple';
-	header.style.backgroundColor = 'rgba(0, 230, 50, 0.9)'
+	header.style.backgroundColor = 'rgba(0, 230, 50, 0.9)';
 	header.style.borderColor = 'rgba(50, 255, 50, 0.9)';
 	submitForm.style.backgroundColor = 'rgba(180, 0, 95, 0.9)';
 	submitForm.style.borderColor = 'rgb(230, 0, 95)';
@@ -368,5 +369,4 @@ function showSpaceSuit() {
 	incorrectDiv.style.borderColor = 'rgb(0, 225, 255)';
 	correctDiv.style.backgroundColor = 'rgba(0, 230, 50, 0.9)';
 	correctDiv.style.borderColor = 'rgba(100, 255, 50, 0.9)';
-
 }

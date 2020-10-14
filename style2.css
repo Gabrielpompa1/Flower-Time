@@ -1,8 +1,8 @@
 html {
-    min-width: 360px;
-    min-height: 640px;
-    max-width: 1920px;
-    max-height: 1080px;
+	min-width: 360px;
+	min-height: 640px;
+	max-width: 1920px;
+	max-height: 1080px;
 	font-family: 'Indie Flower', cursive;
 	background-image: url('flowerbackground.png');
 	background-size: 30%;
@@ -10,8 +10,8 @@ html {
 	margin: 0 auto;
 }
 header {
-    width: 450px;
-    margin: 0 auto;
+	width: 450px;
+	margin: 0 auto;
 	font-size: large;
 	background-color: rgb(213, 250, 250, 0.9);
 	border-radius: 50%;
@@ -22,7 +22,7 @@ header {
 }
 
 button {
-    margin: 5px;
+	margin: 5px;
 }
 header h1 {
 	font-size: 60px;
@@ -40,7 +40,7 @@ header h1 {
 }
 
 .costume-submit {
-    font-size: large;
+	font-size: large;
 }
 
 .closed {
@@ -67,8 +67,8 @@ main {
 }
 
 form {
-    position: relative;
-    bottom: 15px;
+	position: relative;
+	bottom: 15px;
 	text-align: center;
 }
 
@@ -76,8 +76,8 @@ form {
 	background-color: rgb(255, 150, 50, 0.9);
 	grid-column: 1 / span 1;
 	grid-row: 1 / span 4;
-    text-align: center;
-    border: 5px solid rgb(255, 110, 0);
+	text-align: center;
+	border: 5px solid rgb(255, 110, 0);
 }
 
 .incorrect-ul p {
@@ -89,24 +89,24 @@ form {
 .correct-guesses {
 	background-color: #aafafae1;
 	grid-row: 6 / span 1;
-    grid-column: 1 / span 3;
-    border: 5px solid  #0afafae1;
+	grid-column: 1 / span 3;
+	border: 5px solid #0afafae1;
 }
 
 .correct-ul {
-    justify-content: space-around;
-    line-height: 5px;
+	justify-content: space-around;
+	line-height: 5px;
 }
 
 .submit-form {
-    background-color: rgb(255, 255, 150, 0.9);
+	background-color: rgb(255, 255, 150, 0.9);
 	grid-row: 5 / span 1;
 	grid-column: 1 / span 3;
-    border: 5px solid  rgb(255, 235, 0);
+	border: 5px solid rgb(255, 235, 0);
 }
 
 .submit-form h3 {
-    text-align: center;
+	text-align: center;
 }
 
 .input {
@@ -129,12 +129,11 @@ form {
 }
 
 .flower {
-    background-color: rgb(100, 255, 100, 0.9);
-    border: 5px solid rgb(0, 235, 0, 0.9);
+	background-color: rgb(100, 255, 100, 0.9);
+	border: 5px solid rgb(0, 235, 0, 0.9);
 	grid-row: 1 / span 4;
 	grid-column: 2 / span 2;
-    text-align: center;
-
+	text-align: center;
 }
 
 .word-title {

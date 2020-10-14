@@ -47,6 +47,25 @@
 - Play against a computer
 - Show different flower animations
 
+# List of Technologies Used
+- HTML5
+- CSS3
+- Javascript
+- DOM
+
+# Working App Screenshots
+- ![Flower Time screenshot 2](FlowertimeEx2.png)
+- ![Flower Time screenshot 1](FlowertimeEx1.png)
+
+# Unsolved problems / Major Hurdles
+- I did not manage to make the word choices dynamic. I have plans on how to fix this, but I just ran out of time.
+- One major hurdle and a proud moment for me was creating the makeUnderScore() function. When I typed it out and it worked, the moment the logic clicked I had felt I made the perfect function for what I was looking for and it felt great. The underscore issue gave me toruble for the first part of my assignment, and I made a good function that works dynamically.
+- A second hurdle that I crossed, was designing the flower with CSS. I hadn't really worked with CSS shapes before but I figured it out and made something I am really proud of. It fits perfect with the design and the extra costumes were an added bonus.
+
+# Installation Instructions
+- Clone this repository.
+- Open HTML in a web browser or Live Server using a text editor.
+
 # Credits
 
 - 'Flowers  Bees Petals Plants Honey'
